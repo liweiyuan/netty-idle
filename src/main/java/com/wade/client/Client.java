@@ -45,7 +45,7 @@ public class Client {
                 byteBuf.writeByte(CustomHeartbeatHandler.CUSTOM_MSG);
                 byteBuf.writeBytes(message.getBytes());
                 channel.writeAndFlush(byteBuf);
-                Thread.sleep(random.nextInt(20000));
+                Thread.sleep(/*random.nextInt(20000)*/20000);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

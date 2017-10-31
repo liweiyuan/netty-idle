@@ -24,6 +24,7 @@ public class ClientHandler extends CustomHeartbeatHandler {
     @Override
     protected void handleAllIdle(ChannelHandlerContext ctx) {
         super.handleAllIdle(ctx);
+        //客户端调用该方法向服务端发送PING消息
         sendPingMsg(ctx);
     }
 }

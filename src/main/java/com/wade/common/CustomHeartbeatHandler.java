@@ -47,6 +47,10 @@ public abstract class CustomHeartbeatHandler extends SimpleChannelInboundHandler
         }
     }
 
+    /**
+     * 向服务端发送PING消息
+     * @param ctx
+     */
     public void sendPingMsg(ChannelHandlerContext ctx) {
         ByteBuf byteBuf = ctx.alloc().buffer(5);
         byteBuf.writeInt(5);
